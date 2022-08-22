@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.tron.tron-math</groupId>
+    <artifactId>tron-math</artifactId>
+    <version>1.0-SNAPSHOT</version>
+<!--    <packaging>bundle</packaging>-->
+
+    <properties>
+        <forge-project-id>tron-math</forge-project-id>
+        <forge-project-id-uc>TRON-MATH</forge-project-id-uc>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hawtjni-version>1.18</hawtjni-version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>5.12.1</version>
+        </dependency>
+    </dependencies>
+</project>
