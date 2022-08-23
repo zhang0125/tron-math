@@ -9,7 +9,7 @@ public class TronMath {
    */
   public static native double power(double x, double y);
 
-  private static boolean LoadLib() {
+  public static boolean LoadLib() {
     try {
       Native.register(TronMath.class, "tron_math");
     } catch (final Throwable t) {
