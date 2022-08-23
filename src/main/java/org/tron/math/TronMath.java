@@ -1,6 +1,6 @@
 package org.tron.math;
 
-import com.sun.jna.Native;
+import org.fusesource.hawtjni.runtime.Library;
 
 public class TronMath {
   /**
@@ -9,17 +9,15 @@ public class TronMath {
    */
   public static native double power(double x, double y);
 
-  public static boolean LoadLib() {
-    try {
-      Native.register(TronMath.class, "tron_math");
-    } catch (final Throwable t) {
-      return false;
-    }
-    return true;
+  public static void loadLib() {
+    Library LIBRARY = new Library("tron_math", TronMath.class);
+    LIBRARY.load();
   }
-  // public static void main(String[] args){
-  //   System.loadLibrary("tron_math");
-  //   double x=1.0061363892207218, y=0.0005;
-  //   System.out.printf("%.16f\n", power(x,y));
-  // }
+
+  public static void main(String[] args){
+    //System.loadLibrary("tron_math");
+    TronMath.loadLib();
+    double x=1.0061363892207218, y=0.0005;
+    System.out.printf("%.16f\n", power(x,y));
+  }
 }

@@ -1,0 +1,20 @@
+<assembly>
+    <id>sources</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/</outputDirectory>
+            <unpack>true</unpack>
+            <useTransitiveDependencies>true</useTransitiveDependencies>
+            <includes>
+                <include>*:*:jar:sources</include>
+            </includes>
+            <excludes>
+                <!-- <exclude>org.apache.activemq:apollo-web:pom</exclude> -->
+            </excludes>
+        </dependencySet>
+    </dependencySets>
+</assembly>
