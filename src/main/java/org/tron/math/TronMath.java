@@ -4,20 +4,19 @@ import org.fusesource.hawtjni.runtime.Library;
 
 public class TronMath {
   /**
-   * Supply the power method of JDK8.
-   * notice y must in [-1,1]
+   * Implement the pow method for JDK8 x86.
+   * notice y must in [-1,1].
+   * @param   a   the base.
+   * @param   b   the exponent.
+   * @return  the value {@code a}<sup>{@code b}</sup>.
    */
-  public static native double power(double x, double y);
+  public static native double pow(double a, double b);
 
+  /**
+   * Initialize dynamic libraries
+   */
   public static void loadLib() {
     Library LIBRARY = new Library("tron_math", TronMath.class);
     LIBRARY.load();
-  }
-
-  public static void main(String[] args){
-    //System.loadLibrary("tron_math");
-    TronMath.loadLib();
-    double x=1.0061363892207218, y=0.0005;
-    System.out.printf("%.16f\n", power(x,y));
   }
 }
